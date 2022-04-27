@@ -17,7 +17,7 @@ export default function Home() {
         <div className='header flex justify-between items-center'>
           <img className='w-28' alt="Uber logo here" src="https://i.ibb.co/84stgjq/uber-technologies-new-20218114.jpg" />
           <div className='profile flex items-center'>
-            <div className='name mr-4'>Hemant</div>
+            <div className='name mr-4 font-semibold'>Hemant</div>
             <img className="h-12 w-12 rounded-full border border-gray-200 p-px" alt="User Profile Image here" src="https://image.shutterstock.com/image-photo/head-shot-portrait-close-smiling-260nw-1714666150.jpg" />
           </div>
         </div>
