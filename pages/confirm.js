@@ -45,13 +45,15 @@ function Confirm() {
         <div className='flex h-screen flex-col'>
             <Map pickupCoordinates={pickupCoordinates} dropoffCoordinates={dropoffCoordinates} />
 
-            <div className="ride-container flex flex-1 flex-col">
+            <div className="ride-container flex flex-1 flex-col h-1/2">
                 {/* Ride Selector */}
-                <RideSelector/>
+                <RideSelector />
 
                 {/* Confirm Button */}
-                <div className="confirm-butoon-container bg-black text-white">
-                    Confirm UberX
+                <div className="confirm-butoon-container border-t-2">
+                    <div className="confirm-button bg-black text-white m-4 py-4 text-center text-xl cursor-pointer">
+                        Confirm UberX
+                    </div>
                 </div>
             </div>
 
