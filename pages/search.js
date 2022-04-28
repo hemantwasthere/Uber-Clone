@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 
 function Search() {
+
+  const [pickup, setPickup] = useState("")
+  const [dropoff, setDropoff] = useState("")
+
   return (
     <div className='wrapper bg-gray-200 h-screen'>
       {/* Button container */}
@@ -18,8 +22,8 @@ function Search() {
           <img className='h-3' src="https://img.icons8.com/windows/50/000000/square-full.png" alt="" />
         </div>
         <div className="input-boxes flex flex-col flex-1">
-          <input type="text" placeholder='Enter pickup location' className='h-10 bg-gray-200 my-2 rounded-sm p-2 outline-none border-none' />
-          <input type="text" placeholder='Where to?' className='h-10 bg-gray-200 my-2 rounded-sm p-2 outline-none border-none' />
+          <input value={pickup} onChange={(e) => setPickup(e.target.value)} type="text" placeholder='Enter pickup location' className='h-10 bg-gray-200 my-2 rounded-sm p-2 outline-none border-none' />
+          <input value={dropoff} onChange={(e) => setDropoff(e.target.value)} type="text" placeholder='Where to?' className='h-10 bg-gray-200 my-2 rounded-sm p-2 outline-none border-none' />
         </div>
         <img src="https://img.icons8.com/ios/50/000000/plus-math.png" className='w-10 h-10 bg-gray-200 rounded-full ml-3 ' alt="" />
       </div>
@@ -31,9 +35,17 @@ function Search() {
       </div>
 
       {/* Confirm location */}
-      <div className="confirm-locatio">
-        <button className='px-6 py-1 w-11/12 mx-3 my-3 bg-black text-white text-2xl'>Confirm Locations</button>
-      </div>
+      <Link passHref href={{
+        pathname: "/confirm",
+        query: {
+          pickup: pickup,
+          dropoff: dropoff
+        }
+      }}>
+        <div className="confirm-location cursor-pointer">
+          <div className='px-4 py-3 mx-4 mt-2 text-center bg-black text-white text-2xl'>Confirm Locations</div>
+        </div>
+      </Link>
     </div>
   )
 }
