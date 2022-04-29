@@ -8,11 +8,11 @@ function RideSelector({ pickupCoordinates, dropoffCoordinates }) {
     // 1. Pickup Coordinates
     // 1. Dropoff Coordinates
     useEffect(() => {
-        fetch(`https://api.mapbox.com/directions/v5/mapbox/driving${pickupCoordinates[0]}, ${pickupCoordinates[1]};${dropoffCoordinates[0]}, ${dropoffCoordinates[1]}?access_token=pk.eyJ1IjoiaGVtYW50LTAwMDAiLCJhIjoiY2wyaGswdTVuMGR0ZDNpbnp2a2FkbGk3NSJ9.RPOv8hSECbudaB16oiXvxA`)
-        .then(res => res.json())
-        .then(data => {
-            setRideDuration(data.routes[0].duration/100)
-        })
+        // fetch(`https://api.mapbox.com/directions/v5/mapbox/driving${pickupCoordinates[0]}, ${pickupCoordinates[1]};${dropoffCoordinates[0]}, ${dropoffCoordinates[1]}?access_token=pk.eyJ1IjoiaGVtYW50LTAwMDAiLCJhIjoiY2wyaGswdTVuMGR0ZDNpbnp2a2FkbGk3NSJ9.RPOv8hSECbudaB16oiXvxA`)
+        // .then(res => res.json())
+        // .then(data => {
+        //     setRideDuration(data.routes[0].duration/100)
+        // })
     }, [pickupCoordinates, dropoffCoordinates])
 
 
@@ -36,7 +36,7 @@ function RideSelector({ pickupCoordinates, dropoffCoordinates }) {
                         <div className="service font-medium">UberX</div>
                         <div className="time text-xs text-blue-500">5 min away</div>
                     </div>
-                    <div className="car-price text-sm font-medium">{'$'+ (rideDuration * 1).toFixed(2)}</div>
+                    <div className="car-price text-sm font-medium">$20.32</div>
                 </div>
 
                 <div className="car flex p-4 items-center">
@@ -45,7 +45,7 @@ function RideSelector({ pickupCoordinates, dropoffCoordinates }) {
                         <div className="service font-medium">UberXL</div>
                         <div className="time text-xs text-blue-500">5 min away</div>
                     </div>
-                    <div className="car-price text-sm font-medium">{'$'+ (rideDuration * 1.5).toFixed(2)}</div>
+                    <div className="car-price text-sm font-medium">$30.48</div>
                 </div>
 
                 <div className="car flex p-4 items-center">
@@ -54,25 +54,25 @@ function RideSelector({ pickupCoordinates, dropoffCoordinates }) {
                         <div className="service font-medium">Black</div>
                         <div className="time text-xs text-blue-500">5 min away</div>
                     </div>
-                    <div className="car-price text-sm font-medium">{'$'+ (rideDuration * 2).toFixed(2)}</div>
+                    <div className="car-price text-sm font-medium">$40.64</div>
                 </div>
 
                 <div className="car flex p-4 items-center">
                     <img src='https://i.ibb.co/cyvcpfF/uberx.png' alt="" className="car-image h-14 mr-4" />
                     <div className="car-details flex-1">
-                        <div className="service font-medium">Black</div>
-                        <div className="time text-xs text-blue-500">Comfort</div>
+                        <div className="service font-medium">Comfort</div>
+                        <div className="time text-xs text-blue-500">5 min away</div>
                     </div>
-                    <div className="car-price text-sm font-medium">{'$'+ (rideDuration * 1.2).toFixed(2)}</div>
+                    <div className="car-price text-sm font-medium">$45.90</div>
                 </div>
 
                 <div className="car flex p-4 items-center">
                     <img src='https://i.ibb.co/1nStPWT/uberblacksuv.png' alt="" className="car-image h-14 mr-4" />
                     <div className="car-details flex-1">
                         <div className="service font-medium">Black SUV</div>
-                        <div className="time text-xs text-blue-500">Comfort</div>
+                        <div className="time text-xs text-blue-500">5 min away</div>
                     </div>
-                    <div className="car-price text-sm font-medium">{'$'+ (rideDuration * 2.8).toFixed(2)}</div>
+                    <div className="car-price text-sm font-medium">$53.99</div>
                 </div>
             </div>
         </div>
