@@ -20,7 +20,7 @@ export const carList = [
     multiplier: 1.2,
   },
   {
-    imgUrl: ' https://i.ibb.co/1nStPWT/uberblacksuv.png',
+    imgUrl: 'https://i.ibb.co/1nStPWT/uberblacksuv.png',
     service: 'Black SUV',
     multiplier: 2.8,
   }
