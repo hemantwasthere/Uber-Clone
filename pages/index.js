@@ -1,4 +1,4 @@
-import Map from './components/Map'
+import Map from '../components/Map'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { auth } from '../firebase'
